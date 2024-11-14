@@ -1,5 +1,6 @@
 :root{
-  --flex_val: 100%;
+  --flex_val: 1;
+  --width: 600px
 }
 body {
   font-family: Arial, sans-serif;
@@ -16,21 +17,60 @@ body {
   
 }
 
+@media only screen and (min-width: 300px) {
+  :root{
+    --flex_val: 1;
+    --width: 200px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  :root{
+    --flex_val: 1;
+    --width: 350px;
+  }
+}
+
+
+@media only screen and (min-width: 400px) {
+  :root{
+    --flex_val: 1;
+    --width: 300px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  :root{
+    --flex_val: 2;
+    --width: 300px;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   :root{
-    --flex_val: 50%;
+    --flex_val: 2;
+    --width: 500px;
   }
 }
 
 @media only screen and (min-width: 1500px) {
   :root{
-    --flex_val: 30%;
+    --flex_val: 2;
+    --width: 600px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  :root{
+    --flex_val: 2;
+    --width: 600px;
   }
 }
 
 @media only screen and (min-width: 3000px) {
   :root{
-    --flex_val: 1;
+    --flex_val: 6;
+    --width: 500px;
   }
 }
 
@@ -42,11 +82,13 @@ body {
   padding: 5px 5px 5px 5px;
   margin-bottom: 10px;
   flex: var(--flex_val);
+  width: var(--width);
 }
 
 .Card img {
   border-radius: 0.5em;
-  min-width: 10%;
+  width: var(--width);
+  height: var(--width);
 }
 
 .Card:hover {
